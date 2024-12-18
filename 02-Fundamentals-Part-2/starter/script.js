@@ -91,7 +91,7 @@ const jack = ["Jack", "Le", 2024 - 2002, "Student"];
 console.log(jack);
 */
 
-// Exercise
+/* Exercise
 const calcAge = function (birthYeah) {
   return 2037 - birthYeah;
 };
@@ -100,7 +100,70 @@ const years = [1990, 1967, 2002, 2010, 2018];
 const ages = [];
 
 for (let index = 0; index < years.length; index++) {
-  const age = calcAge(years[index]);
+  const age = calcAge(years[index]); 
   ages[index] = age;
 }
 console.log(ages);
+*/
+
+//40. Basic Array Operations (Methods)
+/*
+const friends = ["Michael", "Steven", "Peter"];
+// Add Elements
+const newLength = friends.push("Jay"); // add to the back
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("John"); //Add to front
+console.log(friends);
+
+// Remove elements
+
+friends.pop(); //  remove last
+console.log(friends);
+
+friends.shift(); // remove first
+console.log(friends);
+
+console.log(friends.indexOf("Peter"));
+friends.push("23");
+console.log(friends.includes("Steven"));
+console.log(friends.includes("John"));
+console.log(friends.includes("23"));
+
+if (friends.includes("Steven")) {
+  console.log("You have a friend name Peter");
+}*/
+
+//Coding Challenge
+// CHALLENGE #2
+// Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+// Your tasks:
+
+// Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+// And now let's use arrays! So, create an array called bills containing the test data below.
+
+// Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+// BONUS: Create an array totals containing the total values, so the bill + tip.
+
+// TEST DATA: 125, 555, and 44.
+const bills = [125, 555, 44];
+const tips = [];
+
+function calcTip(bills, tips) {
+  const total = [];
+  for (i = 0; i < bills.length; i++) {
+    if (bills[i] >= 50 && bills[i] <= 300) {
+      tips[i] = bills[i] * 0.15;
+    } else {
+      tips[i] = bills[i] * 0.2;
+    }
+    total[i] = tips[i] + bills[i];
+  }
+  return console.log(bills, tips, total);
+}
+
+calcTip(bills, tips);
