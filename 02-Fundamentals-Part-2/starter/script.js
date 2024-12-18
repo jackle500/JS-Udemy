@@ -275,3 +275,37 @@ const jonasArray = [
 //       : mark.fullName + "'s BMI (" + mark.calcBMI() + ")!"
 //   }`
 //);
+
+const jack = [
+  "jack",
+  "le",
+  2024 - 2002,
+  "student",
+  ["kay", "trinh", "dat"],
+  true,
+];
+const types = [];
+
+for (let index = 0; index < jack.length; index++) {
+  console.log(jack[index], typeof jack[index]);
+  types[index] = typeof jack[index];
+}
+console.log(types);
+
+// calc age
+
+const years = [1991, 2007, 1968, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2024 - years[i]);
+}
+
+console.log(ages);
+
+console.log("only string");
+
+for (let i = 0; i < jack.length; i++) {
+  if (typeof jack[i] !== "string") continue;
+  console.log(jack[i], typeof jack[i]);
+}
