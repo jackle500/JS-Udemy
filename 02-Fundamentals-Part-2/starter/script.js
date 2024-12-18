@@ -180,37 +180,98 @@ const jonasArray = [
   ["Michael", "John", "Steven"],
 ];
 */
-// 43. Dot vs. Bracket Notation
-const jack = {
-  firstName: "Jack",
-  lastName: "Le",
-  job: "Student",
-  age: 2024 - 2002,
-  friend: ["Michael", "John", "Steven"],
-};
+// // 43. Dot vs. Bracket Notation
+// const jack = {
+//   firstName: "Jack",
+//   lastName: "Le",
+//   job: "Student",
+//   age: 2024 - 2002,
+//   friend: ["Michael", "John", "Steven"],
+// };
 
-//console.log(jack.friend);
+// //console.log(jack.friend);
 
-const nameKey = "Name";
-console.log(jack["first" + nameKey]);
-console.log(jack["last" + nameKey]);
+// const nameKey = "Name";
+// console.log(jack["first" + nameKey]);
+// console.log(jack["last" + nameKey]);
 
-// const interestIn = prompt(
-//   "What do you want to know about jack? choose between firstname, lastname, age, job, and friends"
+// // const interestIn = prompt(
+// //   "What do you want to know about jack? choose between firstname, lastname, age, job, and friends"
+// // );
+
+// // if (jack[interestIn]) {
+// //   console.log(jack[interestIn]);
+// // } else {
+// //   console.log("Wrong request");
+// // }
+
+// jack.location = "Viet Nam";
+// jack["Facebook"] = "@HuyLe";
+// //console.log(jack);
+
+// // Challenge
+
+// console.log(
+//   `${jack.firstName} has ${jack.friend.length} friends, and his best friend is called ${jack.friend[0]}`
 // );
 
-// if (jack[interestIn]) {
-//   console.log(jack[interestIn]);
-// } else {
-//   console.log("Wrong request");
-// }
+//44. Object Methods
 
-jack.location = "Viet Nam";
-jack["Facebook"] = "@HuyLe";
-//console.log(jack);
+// const jack = {
+//   firstName: "Jack",
+//   lastName: "Le",
+//   job: "Student",
+//   age: 2002,
+//   friend: ["Michael", "John", "Steven"],
+//   hasDriverLicense: false,
 
-// Challenge
+//   calcAge: function () {
+//     return 2024 - this.age;
+//   },
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge(this.age)} years old ${
+//       this.job
+//     }, and he has ${this.hasDriverLicense ? "a" : "not"} driver license.`;
+//   },
+// };
 
-console.log(
-  `${jack.firstName} has ${jack.friend.length} friends, and his best friend is called ${jack.friend[0]}`
-);
+// console.log(jack.calcAge());
+// // challenge
+// console.log(jack.getSummary());
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
+
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
+
+// // Calculate BMI for both Mark and John
+// mark.calcBMI();
+// john.calcBMI();
+
+// console.log(
+//   `${
+//     mark.bmi > john.bmi
+//       ? mark.fullName + "'s BMI (" + mark.calcBMI() + ")"
+//       : john.fullName + "'s BMI (" + john.calcBMI() + ")"
+//   } is higher than ${
+//     mark.bmi > john.bmi
+//       ? john.fullName + "'s BMI (" + john.calcBMI() + ")!"
+//       : mark.fullName + "'s BMI (" + mark.calcBMI() + ")!"
+//   }`
+//);
