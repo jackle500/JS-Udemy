@@ -150,6 +150,7 @@ if (friends.includes("Steven")) {
 // BONUS: Create an array totals containing the total values, so the bill + tip.
 
 // TEST DATA: 125, 555, and 44.
+/*
 const bills = [125, 555, 44];
 const tips = [];
 
@@ -167,3 +168,49 @@ function calcTip(bills, tips) {
 }
 
 calcTip(bills, tips);
+*/
+
+// 42. Introduction to Objects
+/*
+const jonasArray = [
+  "jack",
+  "Le",
+  2024 - 2002,
+  "Student",
+  ["Michael", "John", "Steven"],
+];
+*/
+// 43. Dot vs. Bracket Notation
+const jack = {
+  firstName: "Jack",
+  lastName: "Le",
+  job: "Student",
+  age: 2024 - 2002,
+  friend: ["Michael", "John", "Steven"],
+};
+
+//console.log(jack.friend);
+
+const nameKey = "Name";
+console.log(jack["first" + nameKey]);
+console.log(jack["last" + nameKey]);
+
+// const interestIn = prompt(
+//   "What do you want to know about jack? choose between firstname, lastname, age, job, and friends"
+// );
+
+// if (jack[interestIn]) {
+//   console.log(jack[interestIn]);
+// } else {
+//   console.log("Wrong request");
+// }
+
+jack.location = "Viet Nam";
+jack["Facebook"] = "@HuyLe";
+//console.log(jack);
+
+// Challenge
+
+console.log(
+  `${jack.firstName} has ${jack.friend.length} friends, and his best friend is called ${jack.friend[0]}`
+);
