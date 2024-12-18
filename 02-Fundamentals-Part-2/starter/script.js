@@ -315,9 +315,47 @@ const jonasArray = [
 //   console.log(i, jack[i]);
 // }
 
-for (let exercise = 1; exercise < 4; exercise++) {
-  console.log(`-------- Starting exerciese ${exercise}`);
-  for (let rep = 1; rep < 6; rep++) {
-    console.log(`Lifting weight repetition ${rep}`);
-  }
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`-------- Starting exerciese ${exercise}`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Lifting weight repetition ${rep}`);
+//   }
+// }
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}`);
+// }
+
+// let rep = 1;
+
+// while (rep <= 10) {
+//   console.log(`Lifting weights repetition ${rep}`);
+//   rep++;
+// }
+
+// let dice = 0;
+
+// while (dice !== 6) {
+//   dice = Math.floor(Math.random() * 6) + 1;
+//   console.log(dice);
+// }
+
+//Challenge
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const total = [];
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+for (let i = 0; i < bills.length; i++) {
+  tips[i] = calcTip(bills[i]);
+  total[i] = tips[i] + bills[i];
 }
+
+console.log(tips);
+console.log(total);
+
+// console.log(calcTip(bills, tips, total));
